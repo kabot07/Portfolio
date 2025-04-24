@@ -112,25 +112,194 @@ int main () {
     printf("PIB: %.2f reais\n", PIB2);
     printf("Pontos Turisticos: %d\n", pontosturisticos2);
     printf("Densidade populacional: %.2f hab/km²\n", DenP2);
-    printf("PIB per Capita: %.2f reais\n", capita2 );
+    printf("Renda per Capita: %.2f reais\n", capita2 );
     printf ("Super Poder: %2.f \n", superpoder2);
 
     printf("\n");
-    //COMPARAR CARTAS
+   
+    //Pela escolha do jogadores utilizando o menu, determinar qual carta ira vencer
+    
+    int escolhajogada;
+    
+    printf("°°° COMPETIÇÃO POR ATRIBUTO °°°\n");
+    printf("\n");
+    printf(" Escolha um atributo: \n");
+    printf("1. Qual o nome dos países\n");
+    printf("2. População\n");
+    printf("3. Área\n");
+    printf("4. PIB\n");
+    printf("5. Pontos Turisticos\n");
+    printf("6. Densidade Demográfica\n");
+    printf("7. Renda Per Capita\n");
+    printf("8. Super Poder\n");
+    printf("Escolha: \n");
+    scanf("%d", &escolhajogada);
 
-    printf("°°° COMPARAÇÃO DAS CARTAS °°°\n");
-    printf("carta A = 1      carta B = 0\n");
+    switch (escolhajogada)
+    \\comparativo nome das cidades
+    {
+        case 1:
+        printf("*'*'* NOMES DAS CIDADES *'*'*:\n");
+        printf(" Carta 1: %s (%s)\n", cidade, estado);
+        printf(" Carta 2: %s (%s)\n", cidade2, estado2);
+        printf("    °°° %s - %s °°°\n", cidade, cidade2);
+       
+    break;
+        
+        case 2:
+        printf("*'*'* A carta vencedora da rodada pelo atributo POPULAÇÃO *'*'*:\n");
+    
+    if (populacao > populacao2) {
+        printf(" Carta 1: %s (%s): %u\n", cidade, estado, populacao);
+        printf(" Carta 2: %s (%s): %u\n", cidade2, estado2, populacao2);
+        printf("         °°° A carta 1 venceu!!!°°° \n ");
+       
+           
+    } else if ((populacao < populacao2)) {
+        printf(" Carta 1: %s (%s): %u\n", cidade, estado, populacao);
+        printf(" Carta 2: %s (%s): %u\n", cidade2, estado2, populacao2);
+        printf("         °°° A carta 2 venceu!!! °°° \n" );
+
+    } else {
+        printf(" Carta 1: %s (%s): %u\n", cidade, estado, populacao);
+        printf(" Carta 2: %s (%s): %u\n", cidade2, estado2, populacao2);
+        printf("                   ### EMPATE ###");
+    }
+    break;
+        
+        case 3:
+        printf("*'*'* A carta vencedora da rodada pelo atributo ÁREA *'*'*:\n");
+    
+    if (areakm > areakm2) {
+        printf(" Carta 1: %s (%s): %.2f\n", cidade, estado, areakm);
+        printf(" Carta 2: %s (%s): %.2f\n", cidade2, estado2, areakm2);
+        printf("         °°° A carta 1 venceu!!!°°° \n");
+       
+           
+    } else if ((areakm < areakm2)) {
+        printf(" Carta 1: %s (%s): %.2f\n", cidade, estado, areakm);
+        printf(" Carta 2: %s (%s): %.2f\n", cidade2, estado2, areakm2);
+        printf("         °°° A carta 2 venceu!!! °°° \n" );
+
+    } else {
+        printf(" Carta 1: %s (%s): %.2f\n", cidade, estado, areakm);
+        printf(" Carta 2: %s (%s): %.2f\n", cidade2, estado2, areakm2);
+        printf("                      ### EMPATE ###");
+    }
+    break;
+
+        case 4:
+    if (PIB > PIB2) {
+        printf(" Carta 1: %s (%s): %.2f\n", cidade, estado, PIB);
+        printf(" Carta 2: %s (%s): %.2f\n", cidade2, estado2, PIB2);
+        printf("         °°° A carta 1 venceu!!!°°° \n" );
+           
+               
+    } else if ((PIB < PIB2)) {
+        printf(" Carta 1: %s (%s): %.2f\n", cidade, estado, PIB);
+        printf(" Carta 2: %s (%s): %.2f\n", cidade2, estado2, PIB2);
+        printf("         °°° A carta 2 venceu!!! °°° \n" );
+    
+    } else {
+        printf(" Carta 1: %s (%s): %.2f\n", cidade, estado, PIB);
+        printf(" Carta 2: %s (%s): %.2f\n", cidade2, estado2, PIB2);
+        printf("                      ### EMPATE ###");
+    }
+    break;
+    
+        case 5:
+        printf("*'*'* A carta vencedora da rodada pelo atributo PONTOS TURISTICOS *'*'*:\n");
+    
+    if (pontosturisticos > pontosturisticos2) {
+        printf(" Carta 1: %s (%s): %d\n", cidade, estado, pontosturisticos);
+        printf(" Carta 2: %s (%s): %d\n", cidade2, estado2, pontosturisticos2);
+        printf("         °°° A carta 1 venceu!!!°°° \n");
+       
+           
+    } else if ((pontosturisticos < pontosturisticos2)) {
+        printf(" Carta 1: %s (%s): %d\n", cidade, estado, pontosturisticos);
+        printf(" Carta 2: %s (%s): %d\n", cidade2, estado2, pontosturisticos2);
+        printf("         °°° A carta 2 venceu!!! °°° \n" );
+
+    } else {
+        printf(" Carta 1: %s (%s): %d\n", cidade, estado, pontosturisticos);
+        printf(" Carta 2: %s (%s): %d\n", cidade2, estado2, pontosturisticos2);
+        printf("                      ### EMPATE ###");
+    }
+    break;
+       
+        case 6: 
+        printf("*'*'* A carta vencedora da rodada pelo atributo DENSIDADE POPULACIONAL *'*'*:\n");
+    
+    if (DenP < DenP2) {
+        printf(" Carta 1: %s (%s): %.2f\n", cidade, estado, DenP);
+        printf(" Carta 2: %s (%s): %.2f\n", cidade2, estado2, DenP2);
+        printf("         °°° A carta 1 venceu!!!°°° \n" );
+           
+               
+    } else if ((DenP > DenP2)) {
+        printf(" Carta 1: %s (%s): %.2f\n", cidade, estado, DenP);
+        printf(" Carta 2: %s (%s): %.2f\n", cidade2, estado2, DenP2);
+        printf("         °°° A carta 2 venceu!!! °°° \n" );
+    
+    } else {
+        printf(" Carta 1: %s (%s): %.2f\n", cidade, estado, DenP);
+        printf(" Carta 2: %s (%s): %.2f\n", cidade2, estado2, DenP2);
+        printf("                      ### EMPATE ###");
+    }
+    break;
+    
+        case 7: 
+        printf("*'*'* A carta vencedora da rodada pelo atributo RENDA PER CAPITA *'*'*:\n");
+    
+    if (capita > capita2) {
+        printf(" Carta 1: %s (%s): %.2f\n", cidade, estado, capita);
+        printf(" Carta 2: %s (%s): %.2f\n", cidade2, estado2, capita2);
+        printf("         °°° A carta 1 venceu!!!°°° \n" );
+           
+               
+    } else if ((capita < capita2)) {
+        printf(" Carta 1: %s (%s): %.2f\n", cidade, estado, capita);
+        printf(" Carta 2: %s (%s): %.2f\n", cidade2, estado2, capita2);
+        printf("         °°° A carta 2 venceu!!! °°° \n" );
+    
+    } else {
+        printf(" Carta 1: %s (%s): %.2f\n", cidade, estado, capita);
+        printf(" Carta 2: %s (%s): %.2f\n", cidade2, estado2, capita2);
+        printf("                      ### EMPATE ###");
+    }
+    break;
+        
+        case 8: 
+        printf("*'*'* A carta vencedora da rodada pelo atributo SUPER PODER *'*'*:\n");
+    
+    if (superpoder > superpoder2) {
+        printf(" Carta 1: %s (%s): %.2f\n", cidade, estado, superpoder);
+        printf(" Carta 2: %s (%s): %.2f\n", cidade2, estado2, superpoder2);
+        printf("         °°° A carta 1 venceu!!!°°° \n" );
+           
+               
+    } else if ((superpoder < superpoder2)) {
+        printf(" Carta 1: %s (%s): %.2f\n", cidade, estado, superpoder);
+        printf(" Carta 2: %s (%s): %.2f\n", cidade2, estado2, superpoder2);
+        printf("        °°° A carta 2 venceu!!! °°° \n" );
+    
+    } else {
+        printf(" Carta 1: %s (%s): %.2f\n", cidade, estado, superpoder);
+        printf(" Carta 2: %s (%s): %.2f\n", cidade2, estado2, superpoder2);
+        printf("                      ### EMPATE ###");
+    }
+    break;
+
+    default:
+        printf("Opção Inválida");
+    break;
+    }
     
     
-    printf(" População: Carta %d venceu\n", populacao > populacao2);
-    printf(" Area: Carta %d venceu\n", areakm > areakm2);
-    printf(" PIB: Carta %d venceu\n", PIB > PIB2);
-    printf(" Pontos Turisticos: Carta %d venceu\n", pontosturisticos > pontosturisticos2);
-    printf(" Densidade Populacional: Carta %d venceu\n", DenP < DenP2);
-    printf(" PIB per Capita: Carta %d venceu\n", capita > capita2);
-    printf(" Super Poder: Carta %d venceu\n", superpoder > superpoder2);
-
-
+    
+    
+    
 
 //Karol Botelho
 return 0;
